@@ -6,7 +6,8 @@ const app: Express = express()
 app.use(express.json())
 app.use(cors())
 
-app.listen(3003, ()=>{
+const port = process.env.PORT || 3003
+app.listen(port, ()=>{
     console.log("Server ready!")
 })
 
